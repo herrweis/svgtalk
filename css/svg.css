@@ -3,9 +3,55 @@
 }
 
 .icon {
-	fill: #fff;
 	height: 48px;
 	width: 48px;
+}
+
+.icon-big {
+  height: 120px;
+  width: 120px;
+}
+
+svg path {
+  all: inherit;
+}
+
+svg.icon.white {
+  fill: #fff;
+}
+
+svg.icon.colored {
+  fill: #0492f5;
+}
+
+svg.icon.outline,
+svg.icon-big.outline {
+  fill: transparent;
+  stroke: #fff;
+  transition: all 0.3s;
+}
+svg.icon-big.outline:hover {
+  fill: #0492f5;
+  stroke: transparent;
+  transform: scale(1.5);
+}
+
+svg.icon-big.linedrawing {
+  fill: rgba(255, 255, 255, 0.5);
+  stroke: transparent;
+}
+
+svg.icon-big.linedrawing:hover {
+  animation: dash 1s ease-out forwards;
+  stroke: #fff;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+@keyframes dash {
+  30% { fill: transparent; }
+  50% { fill: transparent; }
+  100% { fill: #00b095; stroke-dashoffset: 0; }
 }
 
 g, path, circle, rect {
